@@ -1,0 +1,73 @@
+$b:-20;
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgb(13, 13, 13),rgb(28, 28, 28) , rgb(18, 18, 18));
+}
+@keyframes rotateCircle {
+    to{
+        transform: rotate3d(1,1,1,360deg);
+    }
+}
+.circle{
+    // border: 1px solid red;
+    width: 500px;
+    height: 500px;
+    transform-style: preserve-3d;
+    position: relative;
+    animation: rotateCircle 10s linear infinite alternate;
+    >div{
+        position: absolute;
+        top: 0;
+        left: 0;
+        list-style-type: none;
+        width: 100%;
+        height: 100%;
+        transform-style: preserve-3d;
+        >div{
+            position: absolute;
+            top: 0;
+            left: calc(50%);
+            height: 50%;
+            width: 0;
+            transform-origin: bottom;
+            transform-style: preserve-3d;
+            &::after{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 2px;
+                height: 2px;
+                transform: translateX(-50%) rotateX(90deg);
+            }
+            @for $i from 1 through 36{
+                $b:$b+10;
+                &:nth-of-type(#{$i}){
+                    transform: rotate(#{$i*10}deg);
+                    &::after{
+                        background-color: rgb(255,0,$i);
+                    }
+                }
+            }
+        }
+        @for $i from 1 through 36{
+            &:nth-of-type(#{$i}){
+                transform: rotateY(#{$i*10}deg);
+            }
+        }
+    }
+}
+
+
+
+
+

@@ -1,0 +1,385 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgb(13, 13, 13), rgb(28, 28, 28), rgb(18, 18, 18));
+}
+
+@-webkit-keyframes rotateCircle {
+  to {
+    transform: rotate3d(1, 1, 1, 360deg);
+  }
+}
+
+@keyframes rotateCircle {
+  to {
+    transform: rotate3d(1, 1, 1, 360deg);
+  }
+}
+.circle {
+  width: 500px;
+  height: 500px;
+  transform-style: preserve-3d;
+  position: relative;
+  -webkit-animation: rotateCircle 10s linear infinite alternate;
+          animation: rotateCircle 10s linear infinite alternate;
+}
+.circle > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  list-style-type: none;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+.circle > div > div {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 50%;
+  width: 0;
+  transform-origin: bottom;
+  transform-style: preserve-3d;
+}
+.circle > div > div::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 2px;
+  transform: translateX(-50%) rotateX(90deg);
+}
+.circle > div > div:nth-of-type(1) {
+  transform: rotate(10deg);
+}
+.circle > div > div:nth-of-type(1)::after {
+  background-color: rgb(255, 0, 1);
+}
+.circle > div > div:nth-of-type(2) {
+  transform: rotate(20deg);
+}
+.circle > div > div:nth-of-type(2)::after {
+  background-color: rgb(255, 0, 2);
+}
+.circle > div > div:nth-of-type(3) {
+  transform: rotate(30deg);
+}
+.circle > div > div:nth-of-type(3)::after {
+  background-color: rgb(255, 0, 3);
+}
+.circle > div > div:nth-of-type(4) {
+  transform: rotate(40deg);
+}
+.circle > div > div:nth-of-type(4)::after {
+  background-color: rgb(255, 0, 4);
+}
+.circle > div > div:nth-of-type(5) {
+  transform: rotate(50deg);
+}
+.circle > div > div:nth-of-type(5)::after {
+  background-color: rgb(255, 0, 5);
+}
+.circle > div > div:nth-of-type(6) {
+  transform: rotate(60deg);
+}
+.circle > div > div:nth-of-type(6)::after {
+  background-color: rgb(255, 0, 6);
+}
+.circle > div > div:nth-of-type(7) {
+  transform: rotate(70deg);
+}
+.circle > div > div:nth-of-type(7)::after {
+  background-color: rgb(255, 0, 7);
+}
+.circle > div > div:nth-of-type(8) {
+  transform: rotate(80deg);
+}
+.circle > div > div:nth-of-type(8)::after {
+  background-color: rgb(255, 0, 8);
+}
+.circle > div > div:nth-of-type(9) {
+  transform: rotate(90deg);
+}
+.circle > div > div:nth-of-type(9)::after {
+  background-color: rgb(255, 0, 9);
+}
+.circle > div > div:nth-of-type(10) {
+  transform: rotate(100deg);
+}
+.circle > div > div:nth-of-type(10)::after {
+  background-color: rgb(255, 0, 10);
+}
+.circle > div > div:nth-of-type(11) {
+  transform: rotate(110deg);
+}
+.circle > div > div:nth-of-type(11)::after {
+  background-color: rgb(255, 0, 11);
+}
+.circle > div > div:nth-of-type(12) {
+  transform: rotate(120deg);
+}
+.circle > div > div:nth-of-type(12)::after {
+  background-color: rgb(255, 0, 12);
+}
+.circle > div > div:nth-of-type(13) {
+  transform: rotate(130deg);
+}
+.circle > div > div:nth-of-type(13)::after {
+  background-color: rgb(255, 0, 13);
+}
+.circle > div > div:nth-of-type(14) {
+  transform: rotate(140deg);
+}
+.circle > div > div:nth-of-type(14)::after {
+  background-color: rgb(255, 0, 14);
+}
+.circle > div > div:nth-of-type(15) {
+  transform: rotate(150deg);
+}
+.circle > div > div:nth-of-type(15)::after {
+  background-color: rgb(255, 0, 15);
+}
+.circle > div > div:nth-of-type(16) {
+  transform: rotate(160deg);
+}
+.circle > div > div:nth-of-type(16)::after {
+  background-color: rgb(255, 0, 16);
+}
+.circle > div > div:nth-of-type(17) {
+  transform: rotate(170deg);
+}
+.circle > div > div:nth-of-type(17)::after {
+  background-color: rgb(255, 0, 17);
+}
+.circle > div > div:nth-of-type(18) {
+  transform: rotate(180deg);
+}
+.circle > div > div:nth-of-type(18)::after {
+  background-color: rgb(255, 0, 18);
+}
+.circle > div > div:nth-of-type(19) {
+  transform: rotate(190deg);
+}
+.circle > div > div:nth-of-type(19)::after {
+  background-color: rgb(255, 0, 19);
+}
+.circle > div > div:nth-of-type(20) {
+  transform: rotate(200deg);
+}
+.circle > div > div:nth-of-type(20)::after {
+  background-color: rgb(255, 0, 20);
+}
+.circle > div > div:nth-of-type(21) {
+  transform: rotate(210deg);
+}
+.circle > div > div:nth-of-type(21)::after {
+  background-color: rgb(255, 0, 21);
+}
+.circle > div > div:nth-of-type(22) {
+  transform: rotate(220deg);
+}
+.circle > div > div:nth-of-type(22)::after {
+  background-color: rgb(255, 0, 22);
+}
+.circle > div > div:nth-of-type(23) {
+  transform: rotate(230deg);
+}
+.circle > div > div:nth-of-type(23)::after {
+  background-color: rgb(255, 0, 23);
+}
+.circle > div > div:nth-of-type(24) {
+  transform: rotate(240deg);
+}
+.circle > div > div:nth-of-type(24)::after {
+  background-color: rgb(255, 0, 24);
+}
+.circle > div > div:nth-of-type(25) {
+  transform: rotate(250deg);
+}
+.circle > div > div:nth-of-type(25)::after {
+  background-color: rgb(255, 0, 25);
+}
+.circle > div > div:nth-of-type(26) {
+  transform: rotate(260deg);
+}
+.circle > div > div:nth-of-type(26)::after {
+  background-color: rgb(255, 0, 26);
+}
+.circle > div > div:nth-of-type(27) {
+  transform: rotate(270deg);
+}
+.circle > div > div:nth-of-type(27)::after {
+  background-color: rgb(255, 0, 27);
+}
+.circle > div > div:nth-of-type(28) {
+  transform: rotate(280deg);
+}
+.circle > div > div:nth-of-type(28)::after {
+  background-color: rgb(255, 0, 28);
+}
+.circle > div > div:nth-of-type(29) {
+  transform: rotate(290deg);
+}
+.circle > div > div:nth-of-type(29)::after {
+  background-color: rgb(255, 0, 29);
+}
+.circle > div > div:nth-of-type(30) {
+  transform: rotate(300deg);
+}
+.circle > div > div:nth-of-type(30)::after {
+  background-color: rgb(255, 0, 30);
+}
+.circle > div > div:nth-of-type(31) {
+  transform: rotate(310deg);
+}
+.circle > div > div:nth-of-type(31)::after {
+  background-color: rgb(255, 0, 31);
+}
+.circle > div > div:nth-of-type(32) {
+  transform: rotate(320deg);
+}
+.circle > div > div:nth-of-type(32)::after {
+  background-color: rgb(255, 0, 32);
+}
+.circle > div > div:nth-of-type(33) {
+  transform: rotate(330deg);
+}
+.circle > div > div:nth-of-type(33)::after {
+  background-color: rgb(255, 0, 33);
+}
+.circle > div > div:nth-of-type(34) {
+  transform: rotate(340deg);
+}
+.circle > div > div:nth-of-type(34)::after {
+  background-color: rgb(255, 0, 34);
+}
+.circle > div > div:nth-of-type(35) {
+  transform: rotate(350deg);
+}
+.circle > div > div:nth-of-type(35)::after {
+  background-color: rgb(255, 0, 35);
+}
+.circle > div > div:nth-of-type(36) {
+  transform: rotate(360deg);
+}
+.circle > div > div:nth-of-type(36)::after {
+  background-color: rgb(255, 0, 36);
+}
+.circle > div:nth-of-type(1) {
+  transform: rotateY(10deg);
+}
+.circle > div:nth-of-type(2) {
+  transform: rotateY(20deg);
+}
+.circle > div:nth-of-type(3) {
+  transform: rotateY(30deg);
+}
+.circle > div:nth-of-type(4) {
+  transform: rotateY(40deg);
+}
+.circle > div:nth-of-type(5) {
+  transform: rotateY(50deg);
+}
+.circle > div:nth-of-type(6) {
+  transform: rotateY(60deg);
+}
+.circle > div:nth-of-type(7) {
+  transform: rotateY(70deg);
+}
+.circle > div:nth-of-type(8) {
+  transform: rotateY(80deg);
+}
+.circle > div:nth-of-type(9) {
+  transform: rotateY(90deg);
+}
+.circle > div:nth-of-type(10) {
+  transform: rotateY(100deg);
+}
+.circle > div:nth-of-type(11) {
+  transform: rotateY(110deg);
+}
+.circle > div:nth-of-type(12) {
+  transform: rotateY(120deg);
+}
+.circle > div:nth-of-type(13) {
+  transform: rotateY(130deg);
+}
+.circle > div:nth-of-type(14) {
+  transform: rotateY(140deg);
+}
+.circle > div:nth-of-type(15) {
+  transform: rotateY(150deg);
+}
+.circle > div:nth-of-type(16) {
+  transform: rotateY(160deg);
+}
+.circle > div:nth-of-type(17) {
+  transform: rotateY(170deg);
+}
+.circle > div:nth-of-type(18) {
+  transform: rotateY(180deg);
+}
+.circle > div:nth-of-type(19) {
+  transform: rotateY(190deg);
+}
+.circle > div:nth-of-type(20) {
+  transform: rotateY(200deg);
+}
+.circle > div:nth-of-type(21) {
+  transform: rotateY(210deg);
+}
+.circle > div:nth-of-type(22) {
+  transform: rotateY(220deg);
+}
+.circle > div:nth-of-type(23) {
+  transform: rotateY(230deg);
+}
+.circle > div:nth-of-type(24) {
+  transform: rotateY(240deg);
+}
+.circle > div:nth-of-type(25) {
+  transform: rotateY(250deg);
+}
+.circle > div:nth-of-type(26) {
+  transform: rotateY(260deg);
+}
+.circle > div:nth-of-type(27) {
+  transform: rotateY(270deg);
+}
+.circle > div:nth-of-type(28) {
+  transform: rotateY(280deg);
+}
+.circle > div:nth-of-type(29) {
+  transform: rotateY(290deg);
+}
+.circle > div:nth-of-type(30) {
+  transform: rotateY(300deg);
+}
+.circle > div:nth-of-type(31) {
+  transform: rotateY(310deg);
+}
+.circle > div:nth-of-type(32) {
+  transform: rotateY(320deg);
+}
+.circle > div:nth-of-type(33) {
+  transform: rotateY(330deg);
+}
+.circle > div:nth-of-type(34) {
+  transform: rotateY(340deg);
+}
+.circle > div:nth-of-type(35) {
+  transform: rotateY(350deg);
+}
+.circle > div:nth-of-type(36) {
+  transform: rotateY(360deg);
+}/*# sourceMappingURL=style.css.map */
